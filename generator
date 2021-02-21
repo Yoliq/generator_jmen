@@ -1,0 +1,17 @@
+import random
+
+x = ""
+jmena = []
+print("Vlož jméno do náhodného vybírače 3000 nebo napiš konec pro konec a náhodný výběr z aktuálních dat: \nPotvrď pomocí ENTER.")
+print("__________________________________________________________________________________________________")
+while x != "konec":
+    x = input()
+    if x.lower() != "konec":
+        jmena.append(x)
+    
+if jmena == []:
+    print("\n\nNevložil jsi do seznamu žádné jméno!")
+else:
+    nahodneCislo = random.randint(0, len(jmena)-1)
+    print("\n\nVygenerovaný výherce je:")
+    print(jmena[nahodneCislo])
